@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>CSS学習Flexbox編</h1>
+    </header>
+
+    <main>
+        <!-- display: flex; 横並びにしたい要素のすぐ上の親要素に指定する -->
+        <h2>① display: flex;</h2>
+        <div class="container c01">
+            <div class="item">1つめの要素です。1つめの要素です。1つめの要素です。1つめの要素です。</div>
+            <div class="item">2つめの要素です。2つめの要素です。</div>
+            <div class="item">3つめの要素です。3つめの要素です。3つめの要素です。3つめの要素です。3つめの要素です。3つめの要素です。</div>
+            <div class="item">4つめの要素です。</div>
+            <div class="item">5つめの要素です。</div>
+        </div>
+        <!-- flex-wrap: wrap; 折り返しさせる -->
+        <h2>② flex-wrap: wrap;</h2>
+        <div class="container c02">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+        <!-- justify-content 横方向の揃え方を指定する -->
+        <h2>③ justify-content</h2>
+        <div class="container c03">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        <!-- align-items 縦方向の揃え方を指定する -->
+        <h2>④ align-items</h2>
+        <div class="container c04">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item high">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </main>
+</body>
+</html>

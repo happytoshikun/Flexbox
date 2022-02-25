@@ -1,0 +1,71 @@
+.container {
+    width: 800px;
+    padding: 10px;
+    margin: 30px, 0;
+    background: #ccc;
+}
+
+.item{
+    padding 50px 100px;
+    background: #00f;
+    color: #fff;
+}
+
+.container div:nth-child(even) {  
+    background-color: #0099ff;  
+}  
+
+.c01 {
+    display: flex;
+}
+
+.c01 .item{
+    padding: 10px;
+}
+
+.c02 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.c02 .item{
+    width: 250px;
+    height: 100px;
+    padding: 0;
+    line-height: 100px;
+    text-align: center;
+}
+
+.c03 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.c03 .item{
+    width: 200px;
+    height: 100px;
+    padding: 0;
+    line-height: 100px;
+    text-align: center;
+}
+
+.c04 {
+    display: flex;
+    align-items: center;
+}
+
+.c04 .item{
+    width: 150px;
+    height: 100px;
+    padding: 0;
+    line-height: 100px;
+    text-align: center;
+}
+
+.c04 .item.high {
+    width: 150px;
+    height: 150px;
+    padding: 0;
+    line-height: 150px;
+    text-align: center;
+}

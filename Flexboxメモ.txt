@@ -1,0 +1,80 @@
+【Flexboxの使い方】
+
+①justify-content（横方向の配置）
+flex-start: アイテムはコンテナーの左側に並びます。
+flex-end: アイテムはコンテナーの右側に並びます。
+center: アイテムはコンテナーの中央に並びます。
+space-between: アイテムはその間に等しい間隔を空けて表示されます。
+space-around: アイテムはその周囲に等しい間隔を空けて表示されます。
+
+
+②align-items（縦方向の配置）
+flex-start: アイテムはコンテナーの上部に並びます。
+flex-end: アイテムはコンテナーの下部に並びます。
+center: アイテムはコンテナーの垂直方向中央に並びます。
+baseline: アイテムはコンテナーのベースラインに表示されます。
+stretch: アイテムはコンテナーの大きさに合うよう広がります。
+
+
+③flex-direction（反転）
+row: アイテムは文章と同じ方向に配置されます。
+row-reverse: アイテムは文章と逆の方向に配置されます。
+column: アイテムは上から下に向かって配置されます。
+column-reverse: アイテムは下から上に向かって配置されます。
+
+（使用方法）
+#pond {
+    display: flex; row-reverse;
+        flex-direction:
+        justify-content: center;
+        align-items: flex-end;
+}
+
+
+④order
+<integer> (....,-1,0(default),1,....)
+数字の小さい順に並びます。
+
+
+（使用方法）
+.yellow {
+    order: 1;
+}
+
+
+⑤align-self（個別のアイテムへ設定）
+flex-start: アイテムはコンテナーの上部に並びます。
+flex-end: アイテムはコンテナーの下部に並びます。
+center: アイテムはコンテナーの垂直方向中央に並びます。
+baseline: アイテムはコンテナーのベースラインに表示されます。
+stretch: アイテムはコンテナーの大きさに合うよう広がります。
+
+
+⑥flex-wrap
+nowrap: 全てのアイテムは、ひとつの行にフィットします。
+wrap: アイテムは他の行へ折り返します。
+wrap-reverse: アイテムは逆順になって他の行へ折り返します。
+
+
+⑦flex-flow（flex-directionとflex-wrapを統合するショートハンドプロパティー）
+（使用方法）
+flex-flow: column wrap;
+
+
+⑧align-content（縦方向に詰める）
+flex-start: 行はコンテナーの上側に詰められます。
+flex-end: 行はコンテナーの下側に詰められます。
+center: 行はコンテナーの中央に詰められます。
+space-between: 行はその間に等しい間隔を空けて表示されます。
+space-around: 行はその周囲に等しい間隔を空けて表示されます。
+stretch: 行はコンテナーに合うよう引き延ばされます。
+
+align-contentは行間の余白を決めるもので、align-itemsはコンテナーに含まれるアイテム全体としての配置を決めるものです。
+一行だけの場合はalign-contentは何も効果がありません。
+
+（使用方法）
+#pond {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}

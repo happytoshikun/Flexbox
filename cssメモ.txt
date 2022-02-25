@@ -1,0 +1,145 @@
+●タイプセレクター
+【html】
+ <h1>としはるのIT大学</h1>
+
+【css】
+h1 {
+    font-size: 60px;
+}
+
+
+●class（複数指定可）
+【html】
+ <h1 class="title">としはるのIT大学</h1>
+ <h1 class="title big">としはるのIT大学</h1>
+
+【css】
+.title {
+     background-color: pink;
+}
+
+.big {
+    font-size: 60px;
+}
+
+.title.big {           /*titleとbigの両方のクラスを持つタグに効果*/
+    font-size: 60px;
+}
+
+※基本的にclassを使う
+
+●id（複数指定不可）
+【html】
+ <h1 id="title">としはるのIT大学</h1>
+
+【css】
+#title {
+    color: red;
+｝
+
+
+●ユニバーサルセレクタ
+【html】
+<article>
+ ～
+</article>
+
+【css】
+article * {　　　　　  /*artcleタグ内のすべてに効果*/
+    color: red;
+}
+
+
+●属性によるセレクター
+a[href] {
+    color: red;
+}
+
+a[href^="https://www"] {  /*前方一致*/
+    color: red;
+}
+
+a[href*="yahoo"] {     /*部分一致*/
+    color: red;
+}
+
+a[href$="co.jp"] {     /*後方一致*/
+    color: red;
+}
+
+
+●疑似クラスおよび疑似要素によるセレクター
+【html】
+<article>
+    <h1>記事のタイトルです！</h1>
+    <p>ダミー文章</p>
+    <p>ダミー文章</p>
+    <p>ダミー文章</p>
+    <p>ダミー文章</p>
+</article>
+
+【css】
+article p {
+    color: red;
+}
+
+article p:first-of-type {   /*articleタグ内の最初のpタグに効果*/
+    color: red;
+}
+
+article p:first-child {     /*articleタグ内の最初のタグに効果*/
+    color: red;
+}
+
+article p:nth-of-type(2) {   /*articleタグ内の2番目のpタグに効果*/
+    color: red;
+}
+
+article p:not(:first-of-type) {   /*articleタグ内のpタグのうち最初以外に効果*/
+    color: red;
+}
+
+p:hover {                    /*カーソルが上に当てた時に効果*/
+     background-color: pink;
+}
+
+h1::after {               /*h1タグの文字のテキストの後ろにテキストを追加*/
+    content: "!!!!"
+}
+
+h1::before {　　　　　　　/*h1タグの文字のテキストの前にテキストを追加*/
+    content: "!!!!"
+}
+
+p::first-line {           /*1行目のみに効果*/
+    color: red;
+}
+
+p::first-letter {         /*1文字目のみに効果*/
+    color: red;
+}
+
+
+●結合子
+【descendant combinator（子孫結合子）】
+article p {             /*articleタグ内のpタグに効果*/
+    color: red;
+}
+
+【child combinator（子結合子）】
+main > h1 {             /*mainタグ直下のh1タグに効果*/
+    color: red;
+}
+
+【adjacent sibling combinator（隣接兄弟結合子）】
+article p + p {         /*articleタグ内の最初のpタグ以降のpタグに効果*/
+    margin-top: 40px;
+}
+
+※2番目の要素から効果を付けたい時に使用する
+
+
+【general sibling combinator（一般兄弟結合子）】
+article h1 ~ p {        /*articleタグ内のh1タグ内以降のpタグに効果*/
+    color: red;
+}
